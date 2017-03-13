@@ -50,7 +50,6 @@ QModelIndex RootFileSysProxyModel::parent(const QModelIndex& idx) const
 {
 	if(!idx.isValid()) return QModelIndex();
 
-	//parent для rootpath должен быть инвалидным (нет парента)
 	if(idx.internalPointer() == rootIndex(idx.column()).internalPointer())
 	{
 		return QModelIndex();
